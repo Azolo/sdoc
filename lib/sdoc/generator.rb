@@ -364,7 +364,7 @@ class RDoc::Generator::SDoc
   def copy_resources
     resoureces_path = @template_dir + RESOURCES_DIR
     debug_msg "Copying #{resoureces_path}/** to #{@outputdir}/**"
-    FileUtils.cp_r resoureces_path.to_s, @outputdir.to_s, :preserve => true unless $dryrun
+    FileUtils.cp_r resoureces_path.to_s, @outputdir.to_s unless $dryrun
   end
 
   class FilesTree
